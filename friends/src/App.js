@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Display from './Components/Display';
 import './App.css';
 
 class App extends Component {
@@ -12,7 +13,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('CDM now running');
     axios
       .get('http://localhost:5000/friends')
       .then(res => {
@@ -27,7 +27,7 @@ class App extends Component {
 
 
   render() {
-    return <div>hi</div>
+    return <div><Display friends={this.state.friendsList}/></div>
   }
 }
 
