@@ -7,7 +7,7 @@ function Display(props) {
         return (
         <div>
             {props.friends.map(friend => (
-            <div>
+            <div key={friend.id}>
             <h1>{friend.name}</h1>
             <p>{friend.age}</p>
             <p>{friend.email}</p>
